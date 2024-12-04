@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Space_Mono } from "next/font/google";
 import "./globals.css";
 
@@ -26,7 +27,7 @@ export default function RootLayout({
       >
         <main className="w-full max-w-screen-xl mx-auto flex flex-col gap-4 items-center h-screen p-4 sm:p-12 lg:p-24">
           <header className="flex w-full max-w-screen-xl mx-auto justify-between items-center border border-black dark:border-white px-6 py-4">
-            <span className="text-lg font-bold">atomic-chart.com</span>
+            <Link href="/" className="text-lg font-bold">atomic-chart.com</Link>
             <span className="text-sm">v0.1.0</span>
           </header>
           {children}
