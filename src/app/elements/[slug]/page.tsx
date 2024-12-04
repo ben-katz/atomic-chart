@@ -19,11 +19,6 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         title: title,
         description: description,
         keywords: keywords,
-        openGraph: {
-            title: title,
-            description: description,
-            siteName: "Atomic Chart"
-        },
         twitter: {
             title: title,
             description: description
