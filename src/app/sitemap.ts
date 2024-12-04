@@ -5,8 +5,8 @@ import elementData from "@/data/elements.json"
 
 export default function sitemap(): MetadataRoute.Sitemap {
 
-  // Will use the production URL when deployed
-  const baseUrl = process.env.NEXT_PUBLIC_URL || 'localhost:3000'
+  // Use your production URL
+  const baseUrl = "https://www.atomicchart.com"
 
   // Generate sitemap entries for /elements/[slug] pages
   const elementsPages = elementData.elements.map((element) => ({
