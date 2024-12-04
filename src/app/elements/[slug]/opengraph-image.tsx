@@ -18,8 +18,8 @@ export default async function Image({ params }: { params: { slug: string } }) {
                 <div tw="relative w-full h-full p-8 flex flex-col justify-center items-center">
                     <span tw="absolute top-12 left-12 text-6xl">{element?.number}</span>
                     <div tw="flex flex-col items-center pb-8">
-                        <span tw="text-[148px] font-bold">{element?.symbol}</span>
-                        <h1 tw="text-[64px]">{element?.name}</h1>
+                        <span tw="text-[148px] leading-[1] font-bold">{element?.symbol}</span>
+                        <span tw="text-[44px]">{element?.name}</span>
                     </div>
                     <span tw="absolute bottom-12 text-2xl">{element?.atomic_mass}</span>
                 </div>
