@@ -65,7 +65,7 @@ export default async function getWikipediaApplications(title: string): Promise<s
         const applicationsContainer = applicationsSection.parent();
         
         // First try to find a direct paragraph under Applications
-        let mainParagraphElement = applicationsContainer.find('p').first();
+        const mainParagraphElement = applicationsContainer.find('p').first();
 
         if (mainParagraphElement.length > 0) {
             // Use the main paragraph if it exists
