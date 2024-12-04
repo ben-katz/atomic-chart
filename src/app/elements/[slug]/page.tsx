@@ -1,15 +1,10 @@
 // Import the element data
 import elementData from "@/data/elements.json"
 
-// Utility function to get the element data based on the slug
-export const getElement = async (slug: string) => {
-    return elementData.elements.find((element) => element.name.toLowerCase() === slug.toLowerCase())
-}
-
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
     
     const slug = (await params).slug
-    const element = await getElement(slug)
+    const element = elementData.elements.find((element) => element.name.toLowerCase() === slug.toLowerCase())
 
     const title = `What is ${element?.symbol} on the periodic table?`
     const description = `${element?.symbol} is the element ${element?.name} on the periodic table.`
@@ -30,7 +25,7 @@ export default async function ElementPage({ params }: { params: Promise<{ slug: 
 
     // Get the element name from the URL
     const slug = (await params).slug
-    const element = await getElement(slug)
+    const element = elementData.elements.find((element) => element.name.toLowerCase() === slug.toLowerCase())
 
     // If the element is not found, return a not found page
     if (!element) {

@@ -1,5 +1,5 @@
 import { ImageResponse } from 'next/og'
-import { getElement } from './page'
+import elementData from '@/data/elements.json'
 
 export const size = {
     width: 1200,
@@ -10,7 +10,8 @@ export const contentType = 'image/png'
 
 export default async function Image({ params }: { params: { slug: string } }) {
 
-    const element = await getElement(params.slug)
+    const slug = (await params).slug.toLowerCase()
+    const element = elementData.elements.find((element) => element.name.toLowerCase() === slug)
 
     return new ImageResponse(
         (
