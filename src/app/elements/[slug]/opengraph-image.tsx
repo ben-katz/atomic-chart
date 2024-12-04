@@ -15,9 +15,9 @@ export default async function Image({ params }: { params: { slug: string } }) {
     return new ImageResponse(
         (
             <div tw="text-4xl w-full h-full bg-white flex items-center justify-center">
-                <div tw="relative w-full h-full p-8 flex flex-col justify-center items-center border border-black dark:border-white">
-                    <span tw="absolute top-8 left-8 text-8xl">{element?.number}</span>
-                    <div tw="flex flex-col items-center gap-2 pb-8">
+                <div tw="relative w-full h-full p-8 flex flex-col justify-center items-center">
+                    <span tw="absolute top-12 left-12 text-6xl">{element?.number}</span>
+                    <div tw="flex flex-col items-center pb-8">
                         <span tw="text-[148px] font-bold">{element?.symbol}</span>
                         <h1 tw="text-[64px]">{element?.name}</h1>
                     </div>
